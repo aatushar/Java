@@ -53,14 +53,11 @@ public class JavaCLass5 {
 //            System.out.println("The guess number is " + guessNumber);
 
 //         
-        String word = "  J"
-                + "      j"
-                + "  j   j"
-                + "   j j";
         
+            System.out.println("       j");  
+                        
 
-        for (int i = 0; i < word.length(); i++) {
-            System.out.print(word.charAt(i) + " ");
+       
     }
     
 }
