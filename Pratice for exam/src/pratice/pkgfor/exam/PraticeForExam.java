@@ -18,8 +18,8 @@ public class PraticeForExam {
 //        
 //        
 //        int maxNumber=0, minNumber=0;
-//         if (number1>number2 && number2>number3){
-//             maxNumber= number3;
+//         if (number1>number2 && number1>number3){
+//             maxNumber= number1;
 //            } 
 //             else if (number2>number1 && number2>number3){
 //                     maxNumber= number2;
