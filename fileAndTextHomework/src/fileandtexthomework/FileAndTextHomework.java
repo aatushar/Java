@@ -25,7 +25,6 @@ public class FileAndTextHomework {
                     tenWords= " ";
                     
                 }
-//                System.out.println(tenWords);
             }
 
         }
