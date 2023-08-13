@@ -22,11 +22,12 @@ public class Lorem {
                 String word = read.next();
                 tenWords +=word+" ";
                 count++;
-                if (count == 10) {
+                if (count ==10 ) {
 
                     System.out.println(tenWords);
-                    count=0;
-                    tenWords="";
+                    break;
+//                    count=0;
+//                    tenWords="";
                 }
                 
         }
