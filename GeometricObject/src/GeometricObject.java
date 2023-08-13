@@ -1,20 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author user
- */
+import geo.Circle;
+import geo.Geo;
+
+
 public class GeometricObject {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Geo circle =new Circle(5, "Blue", true);
+             Geo rec= new Recetangle (5,2);
     }
     
 }

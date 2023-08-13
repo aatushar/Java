@@ -11,7 +11,7 @@ public class August {
 
    
     public static void main(String[] args)throws FileNotFoundException {
-        File file = new File("C:\\Users\\user\\Desktop\\tushar.txt");
+        File file = new File("C:\\Users\\LENOVO\\Desktop\\loremt.txt");
         Scanner read = new Scanner(file);
         PrintWriter pw= new PrintWriter(file);
         
