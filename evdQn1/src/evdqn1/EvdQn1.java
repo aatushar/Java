@@ -16,7 +16,7 @@ public class EvdQn1 {
         
         System.out.println(Arrays.toString(myArray));
         
-        System.out.println("Pls enter index nuber:");
+        System.out.println("Pls enter index serial:");
         int userInput =input.nextInt();
         
         try{
