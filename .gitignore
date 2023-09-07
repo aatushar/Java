@@ -64,6 +64,35 @@
 /evdQn1/nbproject/private/
 /evdQn1/build/
 >>>>>>> 87ac04676cb7ed4cc07776f94eb6fadc339a9837
+<<<<<<< HEAD
+/ArrayWithIndexNumber/nbproject/private/
+/ArrayWithIndexNumber/build/
+/BinaryIo/nbproject/private/
+/BinaryIo/build/
+/VehecileManagent2/nbproject/private/
+/VehecileManagent2/build/
+/VehicleManagement2/nbproject/private/
+/VehicleManagement2/build/
+/BinaryIO2/nbproject/private/
+/BinaryIO2/build/
+/StudentManagement/nbproject/private/
+/StudentManagement/build/
+/IndexOutOfBound/nbproject/private/
+/IndexOutOfBound/build/
+/VehicleManage/nbproject/private/
+/VehicleManage/build/
+/StudentManagement2/nbproject/private/
+/StudentManagement2/build/
+/GenericMethod/nbproject/private/
+/GenericMethod/build/
+/InterfaceTestAnisul/nbproject/private/
+/InterfaceTestAnisul/build/
+/GenericM/nbproject/private/
+/recurtionFibonacci/nbproject/private/
+/recurtionFibonacci/build/
+/RecurtionFactorial/nbproject/private/
+/RecurtionFactorial/build/
+=======
 /ClassTestVehicleAbstract/nbproject/private/
 /Qn1OutOfBound/nbproject/private/
 /Qn1OutOfBound/build/
@@ -89,6 +118,9 @@
 /ArrayList/nbproject/private/
 /JavaApplication58/nbproject/private/
 /JavaApplication58/build/
+<<<<<<< HEAD
+>>>>>>> d947e7fc757738024969d78acccd1f3420b45c30
+=======
 /JavaApplication59/nbproject/private/
 /MTQn1/nbproject/private/
 /MTQn2/nbproject/private/
@@ -101,9 +133,13 @@
 /threadConcept/nbproject/private/
 /threadConcept/build/
 /joinInThread/nbproject/private/
+<<<<<<< HEAD
 /Chapter17MVC/target/
 /JavaApplication56/nbproject/private/
 /DatabaseConnectorTest/nbproject/private/
 /DatabaseConectTest/nbproject/private/
 /DatabaseConectTest/dist/
 /DatabaseConectTest/build/
+=======
+>>>>>>> d6d624504c8d5efcf25ec2ef45a228f71abd3d40
+>>>>>>> 67e8a61d6ee43bd8543bb3682f95d233b47eff44
