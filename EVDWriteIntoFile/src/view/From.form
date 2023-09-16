@@ -30,7 +30,11 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
+          <Component id="jPanel1" pref="684" max="32767" attributes="0"/>
+=======
           <Component id="jPanel1" pref="718" max="32767" attributes="0"/>
+>>>>>>> e66f44e451f6c70988e2f7facb831834eeaafaca
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -68,7 +72,11 @@
                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
+<<<<<<< HEAD
+                  <Component id="jPanel3" pref="407" max="32767" attributes="0"/>
+=======
                   <Component id="jPanel3" pref="567" max="32767" attributes="0"/>
+>>>>>>> e66f44e451f6c70988e2f7facb831834eeaafaca
               </Group>
           </Group>
       </Group>
@@ -201,7 +209,24 @@
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
+<<<<<<< HEAD
+                      <Component id="txtCell" min="-2" pref="141" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="checkSwming" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                          <Component id="CheckFishig" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="checkTravelling" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="checkGaming" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="comboSubject" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnWrite" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace min="0" pref="84" max="32767" attributes="0"/>
+=======
+                  </Group>
+>>>>>>> e66f44e451f6c70988e2f7facb831834eeaafaca
               </Group>
           </Group>
         </DimensionLayout>
@@ -229,9 +254,13 @@
                   </Group>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Component id="comboSubject" min="-2" max="-2" attributes="0"/>
+<<<<<<< HEAD
+                  <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+=======
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="dateDOB" min="-2" pref="29" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+>>>>>>> e66f44e451f6c70988e2f7facb831834eeaafaca
                   <Component id="btnWrite" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -302,8 +331,6 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
-        </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="dateDOB">
         </Component>
         <Component class="javax.swing.JButton" name="btnWrite">
           <Properties>

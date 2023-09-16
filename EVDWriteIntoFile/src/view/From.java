@@ -55,7 +55,6 @@ public class From extends javax.swing.JFrame {
         checkTravelling = new javax.swing.JCheckBox();
         checkGaming = new javax.swing.JCheckBox();
         comboSubject = new javax.swing.JComboBox<>();
-        dateDOB = new com.toedter.calendar.JDateChooser();
         btnWrite = new javax.swing.JButton();
         txtAddress = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -174,12 +173,25 @@ public class From extends javax.swing.JFrame {
                                 .addComponent(radioOther)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
+<<<<<<< HEAD
+                        .addComponent(checkSwming)
+                        .addGap(8, 8, 8)
+                        .addComponent(CheckFishig)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(checkTravelling)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(checkGaming))
+                    .addComponent(comboSubject, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnWrite))
+                .addGap(0, 84, Short.MAX_VALUE))
+=======
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(comboSubject, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnWrite)
                             .addComponent(dateDOB, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
+>>>>>>> e66f44e451f6c70988e2f7facb831834eeaafaca
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,9 +215,13 @@ public class From extends javax.swing.JFrame {
                     .addComponent(checkGaming))
                 .addGap(37, 37, 37)
                 .addComponent(comboSubject, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
+                .addGap(78, 78, 78)
+=======
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(dateDOB, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
+>>>>>>> e66f44e451f6c70988e2f7facb831834eeaafaca
                 .addComponent(btnWrite)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -224,7 +240,11 @@ public class From extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 684, Short.MAX_VALUE)
+=======
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 718, Short.MAX_VALUE)
+>>>>>>> e66f44e451f6c70988e2f7facb831834eeaafaca
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -258,7 +278,11 @@ public class From extends javax.swing.JFrame {
                         .addGap(1, 1, 1)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
+<<<<<<< HEAD
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 407, Short.MAX_VALUE)))
+=======
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE)))
+>>>>>>> e66f44e451f6c70988e2f7facb831834eeaafaca
         );
 
         pack();
@@ -362,7 +386,6 @@ public class From extends javax.swing.JFrame {
     private javax.swing.JCheckBox checkSwming;
     private javax.swing.JCheckBox checkTravelling;
     private javax.swing.JComboBox<String> comboSubject;
-    private com.toedter.calendar.JDateChooser dateDOB;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
