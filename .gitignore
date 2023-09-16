@@ -179,10 +179,20 @@
 /ClassTestFile/build/
 /ClassTest2Form/nbproject/private/
 /ClassTest2Form/build/
+<<<<<<< HEAD
+/FormDesignWithDbc/nbproject/private/
+/FormDesignWithDbc/build/
+=======
 >>>>>>> e66f44e451f6c70988e2f7facb831834eeaafaca
+<<<<<<< HEAD
 /FromFillup/nbproject/private/
 /FromFillup/build/
 /EmailValidationp/nbproject/private/
 /EmailValidationp/build/
 /ReadFile/nbproject/private/
 /ReadFile/build/
+=======
+>>>>>>> e3b24396a86f75f6e79fde9d936d1d7b3ae8cae6
+/UserLogin/nbproject/private/
+/UserLogin/build/
+>>>>>>> 75d7ebf8e5b3b1b6bcf2eba5d4928851232b3fb9

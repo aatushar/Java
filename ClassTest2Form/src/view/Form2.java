@@ -35,7 +35,7 @@ public class Form2 extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnLogin = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         lblOutput = new javax.swing.JLabel();
 
@@ -59,10 +59,10 @@ public class Form2 extends javax.swing.JFrame {
 
         jLabel3.setText("Email");
 
-        jButton1.setText("Log in");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnLogin.setText("Log in");
+        btnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                btnLoginMouseClicked(evt);
             }
         });
 
@@ -76,7 +76,7 @@ public class Form2 extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
+                    .addComponent(btnLogin)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,14 +104,14 @@ public class Form2 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addGap(51, 51, 51)
-                .addComponent(jButton1)
+                .addComponent(btnLogin)
                 .addGap(0, 28, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
         // TODO add your handling code here:
 
         String email = txtEmail.getText().trim();
@@ -130,7 +130,7 @@ public class Form2 extends javax.swing.JFrame {
             lblOutput.setFont(new Font("Serif", Font.PLAIN, 18));
             lblOutput.setText("");
         }
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_btnLoginMouseClicked
 
     /**
      * @param args the command line arguments
@@ -168,7 +168,7 @@ public class Form2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
