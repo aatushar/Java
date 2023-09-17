@@ -5,8 +5,13 @@
  */
 package pak;
 
+
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -212,6 +217,8 @@ public class Form extends javax.swing.JFrame {
         String name = txtName.getName().trim();
         String email = txtEmail.getName().trim();
         String gender= " ";
+        String subject= boxSubject.getSelectedItem().toString();
+        String dob= jDateChooser1.getDate().toString();
         
         
         if(btnMale.isSelected()){
@@ -229,8 +236,41 @@ public class Form extends javax.swing.JFrame {
         if(ckFishing.isSelected()){
            hobbyList.add("Fishing");
            
-           
+          if(ckGaming.isSelected()){
+              hobbyList.add("Gaming");
+          } 
+            if(ckSwming.isSelected()){
+              hobbyList.add("Swming");
+          }  
+              if(ckTravelling.isSelected()){
+              hobbyList.add("Travelling");
+          } 
+              
+            try {
+                PrintWriter pw = new PrintWriter("Output.txt");
+                
+                pw.print(name+"\n");
+                pw.print(email+"\n");
+                pw.print(gender+"\n");
+                pw.print(subject+"\n");
+                pw.print(hobbyList+"\n");
+                pw.print(dob+"\n");
+                pw.close();
+                
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Form.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            System.out.println(name);     
+            System.out.println(email);     
+            System.out.println(gender);     
+            System.out.println(subject);     
+            System.out.println(hobbyList);     
+            System.out.println(dob);     
+                
     }//GEN-LAST:event_submitMouseClicked
+
+    }//GEN-LAST:event_btnWriteMouseClicked
 
     /**
      * @param args the command line arguments
