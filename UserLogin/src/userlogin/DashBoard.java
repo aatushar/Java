@@ -27,36 +27,8 @@ public class DashBoard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane2 = new javax.swing.JTabbedPane();
-        jTabbedPane3 = new javax.swing.JTabbedPane();
-        jLabel2 = new javax.swing.JLabel();
-        jTabbedPane4 = new javax.swing.JTabbedPane();
-        jButton1 = new javax.swing.JButton();
-        jTabbedPane5 = new javax.swing.JTabbedPane();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jTabbedPane6 = new javax.swing.JTabbedPane();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setText("jLabel2");
-        jTabbedPane3.addTab("tab1", jLabel2);
-
-        jTabbedPane2.addTab("menu", jTabbedPane3);
-
-        jButton1.setText("jButton1");
-        jTabbedPane4.addTab("tab1", jButton1);
-
-        jTabbedPane2.addTab("tab2", jTabbedPane4);
-
-        jTabbedPane5.addTab("tab1", jScrollPane1);
-
-        jTabbedPane2.addTab("tab3", jTabbedPane5);
-        jTabbedPane2.addTab("tab4", jTabbedPane1);
-        jTabbedPane2.addTab("tab5", jTabbedPane6);
-
-        getContentPane().add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 300, 200));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -98,14 +70,5 @@ public class DashBoard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTabbedPane jTabbedPane5;
-    private javax.swing.JTabbedPane jTabbedPane6;
     // End of variables declaration//GEN-END:variables
 }

@@ -12,6 +12,7 @@ public class StudentRegForm {
         f.setLocationRelativeTo(null);
         f.setVisible(true);
         
+        
     }
     
 }
