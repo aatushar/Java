@@ -39,7 +39,10 @@ public class DashBoradPractice extends javax.swing.JFrame {
         menu = new javax.swing.JTabbedPane();
         home = new javax.swing.JTabbedPane();
         sales = new javax.swing.JTabbedPane();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         purchase = new javax.swing.JTabbedPane();
         jRadioButton1 = new javax.swing.JRadioButton();
 
@@ -111,8 +114,30 @@ public class DashBoradPractice extends javax.swing.JFrame {
 
         sales.setBackground(new java.awt.Color(0, 153, 153));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        sales.addTab("tab1", jComboBox1);
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel6.setBackground(new java.awt.Color(191, 123, 150));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Arial Black", 3, 15)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("SALES");
+        jPanel6.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 4, 1130, 90));
+
+        jPanel5.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1130, 100));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+        );
+
+        sales.addTab("tab1", jPanel4);
 
         menu.addTab("tab2", sales);
 
@@ -228,11 +253,14 @@ public class DashBoradPractice extends javax.swing.JFrame {
     private javax.swing.JButton btnPurchase;
     private javax.swing.JButton btnSales;
     private javax.swing.JTabbedPane home;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JTabbedPane menu;
     private javax.swing.JTabbedPane purchase;
