@@ -6,6 +6,8 @@
 package view;
 
 import java.awt.Color;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import util.DbCon1;
 
@@ -15,7 +17,10 @@ import util.DbCon1;
  */
 public class DashBorad extends javax.swing.JFrame {
 
-    DbCon1
+    DbCon1 con = new DbCon1();
+    PreparedStatement ps;
+    String sql = "";
+    ResultSet rs;
             
     /**
      * Creates new form DashBorad
@@ -46,8 +51,9 @@ public class DashBorad extends javax.swing.JFrame {
     }
     public java.sql.Date convertUtilDateToSqlDate(java.sql.Date utilDate){
         if(utilDate != null){
-           return new java.sql.Date(WIDTH)
+           return new java.sql.Date(utilDate.getTime());
         }
+       return null;
     }
             
     /**
