@@ -303,7 +303,7 @@
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="txtSalesDiscount" pref="178" max="32767" attributes="0"/>
                                           <Component id="jTextField1" max="32767" attributes="0"/>
-                                          <Component id="jTextField2" max="32767" attributes="0"/>
+                                          <Component id="txtSalesProductName" max="32767" attributes="0"/>
                                           <Component id="txtSaleUnitPrice" max="32767" attributes="0"/>
                                           <Component id="txtSalesTotalPrice" max="32767" attributes="0"/>
                                       </Group>
@@ -331,10 +331,10 @@
                                           </Group>
                                           <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
                                           <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jDateChooser2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dateSalesDate" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Component id="txtQuantity" min="-2" pref="178" max="-2" attributes="0"/>
+                                  <Component id="txtSaleQuantity" min="-2" pref="178" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
@@ -356,7 +356,7 @@
                                   <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtSalesDueAmount" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtSalesProductName" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -365,7 +365,7 @@
                                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtSaleUnitPrice" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jDateChooser2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dateSalesDate" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -379,7 +379,7 @@
                                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtQuantity" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtSaleQuantity" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -536,16 +536,16 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="jTextField1">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField2">
+                    <Component class="javax.swing.JTextField" name="txtSalesProductName">
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtSaleUnitPrice">
                       <Events>
                         <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txtSaleUnitPriceFocusLost"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txtQuantity">
+                    <Component class="javax.swing.JTextField" name="txtSaleQuantity">
                       <Events>
-                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txtQuantityFocusLost"/>
+                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txtSaleQuantityFocusLost"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtSalesTotalPrice">
@@ -599,7 +599,7 @@
                         <Property name="text" type="java.lang.String" value="Reset"/>
                       </Properties>
                     </Component>
-                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser2">
+                    <Component class="com.toedter.calendar.JDateChooser" name="dateSalesDate">
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel14">
                       <Properties>

@@ -7,6 +7,7 @@ package view;
 
 import java.awt.Color;
 import java.sql.PreparedStatement;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -34,7 +35,7 @@ public class DashBorad extends javax.swing.JFrame {
 //calculate total price
     public float getTotalPrice(){
         float unitPrice = Float.parseFloat(txtSaleUnitPrice.getText().trim());
-        float quanitiy = Float.parseFloat(txtQuantity.getText().trim());
+        float quanitiy = Float.parseFloat(txtSaleQuantity.getText().trim());
         
         float totalPrice = unitPrice * quanitiy;
         
@@ -57,6 +58,17 @@ public class DashBorad extends javax.swing.JFrame {
            return new java.sql.Date(utilDate.getTime());
         }
        return null;
+    }
+     public float getDiscountAmount() {
+
+        return getTotalPrice() - getActualPrice();
+    }
+     public java.sql.Date convertUtilDateToSqlDate(java.util.Date utilDate) {
+        if (utilDate != null) {
+            return new java.sql.Date(utilDate.getTime());
+        }
+
+        return null;
     }
             
     /**
@@ -98,9 +110,9 @@ public class DashBorad extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        txtSalesProductName = new javax.swing.JTextField();
         txtSaleUnitPrice = new javax.swing.JTextField();
-        txtQuantity = new javax.swing.JTextField();
+        txtSaleQuantity = new javax.swing.JTextField();
         txtSalesTotalPrice = new javax.swing.JTextField();
         txtSalesDiscount = new javax.swing.JTextField();
         txtSalesCashReceived = new javax.swing.JTextField();
@@ -109,7 +121,7 @@ public class DashBorad extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         btnSalesSubmit = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        dateSalesDate = new com.toedter.calendar.JDateChooser();
         jLabel14 = new javax.swing.JLabel();
         txtSalesActualPrice = new javax.swing.JTextField();
         purchase = new javax.swing.JTabbedPane();
@@ -346,9 +358,9 @@ public class DashBorad extends javax.swing.JFrame {
             }
         });
 
-        txtQuantity.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtSaleQuantity.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtQuantityFocusLost(evt);
+                txtSaleQuantityFocusLost(evt);
             }
         });
 
@@ -430,7 +442,7 @@ public class DashBorad extends javax.swing.JFrame {
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtSalesDiscount, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
                             .addComponent(jTextField1)
-                            .addComponent(jTextField2)
+                            .addComponent(txtSalesProductName)
                             .addComponent(txtSaleUnitPrice)
                             .addComponent(txtSalesTotalPrice))
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -452,8 +464,8 @@ public class DashBorad extends javax.swing.JFrame {
                                 .addComponent(txtSalesCashReceived, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE))
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton2)
-                            .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(dateSalesDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(txtSaleQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -471,14 +483,14 @@ public class DashBorad extends javax.swing.JFrame {
                     .addComponent(jLabel11)
                     .addComponent(txtSalesDueAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtSalesProductName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel12)
                         .addComponent(jLabel6)
                         .addComponent(txtSaleUnitPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dateSalesDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(71, 71, 71)
@@ -489,7 +501,7 @@ public class DashBorad extends javax.swing.JFrame {
                         .addGap(33, 33, 33)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
-                            .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtSaleQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(31, 31, 31)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
@@ -887,24 +899,24 @@ public class DashBorad extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtSaleUnitPriceFocusLost
 
-    private void txtQuantityFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtQuantityFocusLost
+    private void txtSaleQuantityFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtSaleQuantityFocusLost
         // TODO add your handling code here:
         try {
             if(txtSaleUnitPrice.getText().trim().isEmpty()){
                 txtSaleUnitPrice.requestFocus();
             }
-            else if(!txtQuantity.getText().trim().isEmpty()){
+            else if(!txtSaleQuantity.getText().trim().isEmpty()){
             txtSalesTotalPrice.setText(getTotalPrice()+"");
             }
             else{
                 JOptionPane.showMessageDialog(rootPane, "Quantity is empty");
-                txtQuantity.requestFocus();
+                txtSaleQuantity.requestFocus();
             }
         }
         catch(Exception f){
             JOptionPane.showMessageDialog(rootPane, "Error"+f.getMessage());
         }
-    }//GEN-LAST:event_txtQuantityFocusLost
+    }//GEN-LAST:event_txtSaleQuantityFocusLost
 
     private void txtSalesDiscountKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSalesDiscountKeyPressed
         // TODO add your handling code here:
@@ -919,9 +931,33 @@ public class DashBorad extends javax.swing.JFrame {
 
     private void btnSalesSubmitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalesSubmitMouseClicked
 //         TODO add your handling code here:
-        sql= "insert into sales(name, unitPrice, quantity, totalPrice,"
-                + "discount actualPrice, cashRecived, dueAmount,date)"
-                + "  values(?,?,?,?,?,?,?,?)";
+        sql= "insert into sales(name, unitPrice, quantity, totalPrice, discount,"
+                + " actualPrice, cashRecived, dueAmount, date)"
+                + "  values(?,?,?,?,?,?,?,?,?)";
+        try {
+            ps =con.getCon().prepareStatement(sql);
+            ps.setString(1, txtProductName.getText().trim());
+            ps.setFloat(2, Float.parseFloat(txtSaleUnitPrice.getText().trim()));
+            ps.setFloat(3, Float.parseFloat(txtSaleQuantity.getText().trim()));
+            ps.setFloat(4, getActualPrice());
+            ps.setFloat(5, getDiscountAmount());
+            ps.setFloat(6, Float.parseFloat(txtSalesDueAmount.getText().trim()));
+            ps.setInt(7, 1);
+            ps.setInt(8, 1);
+            ps.setDate(9,convertUtilDateToSqlDate(dateSalesDate.getDate()) );
+            
+            ps.executeUpdate();
+            ps.close();
+            con.getCon().close();
+            
+            JOptionPane.showMessageDialog(rootPane, "Data submited");
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(rootPane, "Data not submit");
+            Logger.getLogger(DashBorad.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     
+      
+      
     }//GEN-LAST:event_btnSalesSubmitMouseClicked
 
     private void txtSalesDiscountKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSalesDiscountKeyTyped
@@ -1002,6 +1038,7 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JButton btnReport;
     private javax.swing.JButton btnSalesSubmit;
     private javax.swing.JButton btnSalse;
+    private com.toedter.calendar.JDateChooser dateSalesDate;
     private javax.swing.JPanel home;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -1013,7 +1050,6 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
     private com.toedter.calendar.JDateChooser jDateChooser3;
     private com.toedter.calendar.JDateChooser jDateChooser4;
     private javax.swing.JLabel jLabel1;
@@ -1069,7 +1105,6 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
@@ -1083,12 +1118,13 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JTextField txtProductCode;
     private javax.swing.JTextField txtProductId;
     private javax.swing.JTextField txtProductName;
-    private javax.swing.JTextField txtQuantity;
+    private javax.swing.JTextField txtSaleQuantity;
     private javax.swing.JTextField txtSaleUnitPrice;
     private javax.swing.JTextField txtSalesActualPrice;
     private javax.swing.JTextField txtSalesCashReceived;
     private javax.swing.JTextField txtSalesDiscount;
     private javax.swing.JTextField txtSalesDueAmount;
+    private javax.swing.JTextField txtSalesProductName;
     private javax.swing.JTextField txtSalesTotalPrice;
     // End of variables declaration//GEN-END:variables
 }
