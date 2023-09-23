@@ -75,6 +75,7 @@ public class DashBorad extends javax.swing.JFrame {
         btnSalse = new javax.swing.JButton();
         btnPurchase = new javax.swing.JButton();
         btn4 = new javax.swing.JButton();
+        btnReport = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         menu = new javax.swing.JTabbedPane();
         home = new javax.swing.JPanel();
@@ -134,7 +135,7 @@ public class DashBorad extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jTabbedPane4 = new javax.swing.JTabbedPane();
+        product = new javax.swing.JTabbedPane();
         jPanel11 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
@@ -151,6 +152,19 @@ public class DashBorad extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         btnPdelate = new javax.swing.JButton();
         btnPreset = new javax.swing.JButton();
+        report = new javax.swing.JTabbedPane();
+        jPanel16 = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        jPanel18 = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jButton8 = new javax.swing.JButton();
+        jDateChooser3 = new com.toedter.calendar.JDateChooser();
+        jDateChooser4 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -238,6 +252,9 @@ public class DashBorad extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 140, 40));
+
+        btnReport.setText("Report");
+        jPanel1.add(btnReport, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 140, 40));
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -675,9 +692,93 @@ public class DashBorad extends javax.swing.JFrame {
                 .addGap(0, 75, Short.MAX_VALUE))
         );
 
-        jTabbedPane4.addTab("product", jPanel11);
+        product.addTab("product", jPanel11);
 
-        menu.addTab("tab4", jTabbedPane4);
+        menu.addTab("tab4", product);
+
+        jPanel17.setBackground(new java.awt.Color(255, 153, 153));
+        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel27.setFont(new java.awt.Font("Arial Black", 2, 15)); // NOI18N
+        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel27.setText("Report");
+        jPanel17.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 744, 100));
+
+        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel28.setText("From");
+
+        jLabel29.setText("To");
+
+        jRadioButton1.setText("Purchase");
+
+        jRadioButton2.setText("Sales");
+
+        jRadioButton3.setText("Stock");
+
+        jButton8.setText("View");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, 1035, Short.MAX_VALUE)
+            .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton3)
+                            .addComponent(jRadioButton2)
+                            .addComponent(jRadioButton1)
+                            .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addComponent(jLabel28)
+                                .addGap(40, 40, 40)
+                                .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(169, 169, 169)
+                                .addComponent(jLabel29)
+                                .addGap(40, 40, 40)
+                                .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(jButton8)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel28)
+                            .addComponent(jLabel29))
+                        .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)))
+                .addGap(95, 95, 95)
+                .addComponent(jRadioButton1)
+                .addGap(47, 47, 47)
+                .addComponent(jRadioButton2)
+                .addGap(43, 43, 43)
+                .addComponent(jRadioButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton8))
+        );
+
+        report.addTab("tab1", jPanel16);
+
+        menu.addTab("tab5", report);
 
         jPanel2.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, -60, -1, 650));
 
@@ -852,6 +953,10 @@ public class DashBorad extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnPsaveMouseClicked
 
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -894,6 +999,7 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JButton btnPreset;
     private javax.swing.JButton btnPsave;
     private javax.swing.JButton btnPurchase;
+    private javax.swing.JButton btnReport;
     private javax.swing.JButton btnSalesSubmit;
     private javax.swing.JButton btnSalse;
     private javax.swing.JPanel home;
@@ -903,10 +1009,13 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
+    private com.toedter.calendar.JDateChooser jDateChooser3;
+    private com.toedter.calendar.JDateChooser jDateChooser4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -926,6 +1035,9 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -940,6 +1052,9 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -948,8 +1063,10 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
@@ -958,7 +1075,9 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JTabbedPane menu;
+    private javax.swing.JTabbedPane product;
     private javax.swing.JTabbedPane purchase;
+    private javax.swing.JTabbedPane report;
     private javax.swing.JTabbedPane sales;
     private javax.swing.JTextField txtCatagory;
     private javax.swing.JTextField txtProductCode;
