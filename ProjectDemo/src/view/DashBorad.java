@@ -70,6 +70,7 @@ public class DashBorad extends javax.swing.JFrame {
 
         return null;
     }
+     public 
             
     /**
      * This method is called from within the constructor to initialize the form.
@@ -93,6 +94,25 @@ public class DashBorad extends javax.swing.JFrame {
         home = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jPanel19 = new javax.swing.JPanel();
+        jPanel20 = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        lblTodaySale = new javax.swing.JLabel();
+        jPanel21 = new javax.swing.JPanel();
+        jLabel33 = new javax.swing.JLabel();
+        lblTodayPurchase = new javax.swing.JLabel();
+        jPanel22 = new javax.swing.JPanel();
+        jLabel37 = new javax.swing.JLabel();
+        lblTodayDue = new javax.swing.JLabel();
+        jPanel23 = new javax.swing.JPanel();
+        lblTotalPurchase = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jPanel24 = new javax.swing.JPanel();
+        jLabel41 = new javax.swing.JLabel();
+        lblTotalSales = new javax.swing.JLabel();
+        jPanel25 = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        lblTotalDue = new javax.swing.JLabel();
         sales = new javax.swing.JTabbedPane();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -271,6 +291,8 @@ public class DashBorad extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        home.setPreferredSize(new java.awt.Dimension(500, 250));
+
         jPanel4.setBackground(new java.awt.Color(204, 204, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -279,17 +301,114 @@ public class DashBorad extends javax.swing.JFrame {
         jLabel2.setText("Home");
         jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, 100));
 
+        jPanel19.setMinimumSize(new java.awt.Dimension(800, 400));
+        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel20.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel35.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel35.setText("Today Sales");
+        jPanel20.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 70));
+
+        lblTodaySale.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblTodaySale.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTodaySale.setText("0.00");
+        jPanel20.add(lblTodaySale, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 230, 80));
+
+        jPanel19.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 230, 150));
+
+        jPanel21.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel33.setText("Today Purchase");
+        jPanel21.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 4, 230, 70));
+
+        lblTodayPurchase.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblTodayPurchase.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTodayPurchase.setText("0.00");
+        jPanel21.add(lblTodayPurchase, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 230, 80));
+
+        jPanel19.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 230, 150));
+
+        jPanel22.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel37.setText("Today Due");
+        jPanel22.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 70));
+
+        lblTodayDue.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblTodayDue.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTodayDue.setText("0.00");
+        jPanel22.add(lblTodayDue, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 230, 80));
+
+        jPanel19.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, 230, 150));
+
+        jPanel23.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel23.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblTotalPurchase.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblTotalPurchase.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTotalPurchase.setText("Total Purchase");
+        jPanel23.add(lblTotalPurchase, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 70));
+
+        jLabel31.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel31.setText("0.00");
+        jPanel23.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 230, 80));
+
+        jPanel19.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 230, 150));
+
+        jPanel24.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel24.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel41.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel41.setText("Total Sales");
+        jPanel24.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 70));
+
+        lblTotalSales.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblTotalSales.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTotalSales.setText("0.00");
+        jPanel24.add(lblTotalSales, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 230, 80));
+
+        jPanel19.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 230, 150));
+
+        jPanel25.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel25.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel39.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel39.setText("Total Due");
+        jPanel25.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 70));
+
+        lblTotalDue.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblTotalDue.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTotalDue.setText("0.00");
+        jPanel25.add(lblTotalDue, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 230, 80));
+
+        jPanel19.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 210, 230, 150));
+
         javax.swing.GroupLayout homeLayout = new javax.swing.GroupLayout(home);
         home.setLayout(homeLayout);
         homeLayout.setHorizontalGroup(
             homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, homeLayout.createSequentialGroup()
+                .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         homeLayout.setVerticalGroup(
             homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homeLayout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 517, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         menu.addTab("tab1", home);
@@ -411,7 +530,7 @@ public class DashBorad extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1035, Short.MAX_VALUE)
+            .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1244, Short.MAX_VALUE)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(61, 61, 61)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -671,7 +790,7 @@ public class DashBorad extends javax.swing.JFrame {
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnPreset)
                             .addComponent(jButton7))))
-                .addContainerGap(720, Short.MAX_VALUE))
+                .addContainerGap(944, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -701,7 +820,7 @@ public class DashBorad extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnPdelate)
                     .addComponent(btnPreset))
-                .addGap(0, 75, Short.MAX_VALUE))
+                .addGap(0, 92, Short.MAX_VALUE))
         );
 
         product.addTab("product", jPanel11);
@@ -739,7 +858,7 @@ public class DashBorad extends javax.swing.JFrame {
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, 1035, Short.MAX_VALUE)
+            .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, 1244, Short.MAX_VALUE)
             .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1075,7 +1194,13 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1091,7 +1216,14 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -1109,6 +1241,12 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel lblTodayDue;
+    private javax.swing.JLabel lblTodayPurchase;
+    private javax.swing.JLabel lblTodaySale;
+    private javax.swing.JLabel lblTotalDue;
+    private javax.swing.JLabel lblTotalPurchase;
+    private javax.swing.JLabel lblTotalSales;
     private javax.swing.JTabbedPane menu;
     private javax.swing.JTabbedPane product;
     private javax.swing.JTabbedPane purchase;

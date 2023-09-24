@@ -75,6 +75,11 @@ public class DashBoradPractice extends javax.swing.JFrame {
                 btnHomeMouseExited(evt);
             }
         });
+        btnHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHomeActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 45, 160, 80));
 
         btnSales.setText("SALES");
@@ -212,6 +217,10 @@ public class DashBoradPractice extends javax.swing.JFrame {
         // TODO add your handling code here:
         btnPurchase.setBackground(getBackground());
     }//GEN-LAST:event_btnPurchaseMouseExited
+
+    private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHomeActionPerformed
 
     /**
      * @param args the command line arguments
