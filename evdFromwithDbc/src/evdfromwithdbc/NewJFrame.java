@@ -182,9 +182,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void btnSaveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSaveMouseClicked
         // TODO add your handling code here:
-        String name = txtName.getText().trim();
-        String roll = txtRoll.getText().trim();
-        String reg = txtReg.getText().trim();
+//        String name = txtName.getText().trim();
+//        String roll = txtRoll.getText().trim();
+//        String reg = txtReg.getText().trim();
 
         String sql = "insert into form(name,roll,reg)"
                 + "   values(?,?,?)";
