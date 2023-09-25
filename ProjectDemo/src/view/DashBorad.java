@@ -25,6 +25,8 @@ public class DashBorad extends javax.swing.JFrame {
     PreparedStatement ps;
     String sql = "";
     ResultSet rs;
+    
+  
             
     /**
      * Creates new form DashBorad
@@ -70,7 +72,7 @@ public class DashBorad extends javax.swing.JFrame {
 
         return null;
     }
-     public 
+     
             
     /**
      * This method is called from within the constructor to initialize the form.
