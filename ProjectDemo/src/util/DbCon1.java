@@ -11,9 +11,9 @@ import java.util.logging.Logger;
 public class DbCon1 {
     
     private Connection con =null;
-    private String url= "jdbc:mysql://localhost:3306/evidence";
+    private String url= "jdbc:mysql://localhost:3306/swingproject";
     private String user= "root";
-    private String password= "1234";
+    private String password= "eamubino";
     private String driver = "com.mysql.cj.jdbc.Driver";
     
     
