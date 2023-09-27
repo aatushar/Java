@@ -5,6 +5,7 @@
  */
 package evdfromwithdbc;
 
+import com.sun.webkit.perf.WCFontPerfLogger;
 import java.io.PrintWriter;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -33,6 +34,12 @@ public class NewJFrame extends javax.swing.JFrame {
     public NewJFrame() {
         initComponents();
         getAllStudent();
+    }
+    
+    public void reset(){
+        txtName.setText(null);
+        txtRoll.setText(null);
+        txtReg.setText(null);
     }
 
     String[] studentColumnName = {"name", "Roll", "Reg"};
@@ -86,6 +93,9 @@ public class NewJFrame extends javax.swing.JFrame {
         btnSave = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tvlStudent = new javax.swing.JTable();
+        btnupdate = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
+        btnDelate = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -125,6 +135,17 @@ public class NewJFrame extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tvlStudent);
 
+        btnupdate.setText("Update");
+        btnupdate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnupdateMouseClicked(evt);
+            }
+        });
+
+        btnReset.setText("Reset");
+
+        btnDelate.setText("Delate");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -134,15 +155,20 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(btnSave))
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnSave)
+                        .addComponent(btnupdate)
+                        .addGap(31, 31, 31)
+                        .addComponent(btnReset)
+                        .addGap(38, 38, 38)
+                        .addComponent(btnDelate)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addGap(59, 59, 59)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtRoll)
                             .addComponent(txtName)
@@ -173,7 +199,11 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addComponent(txtReg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
-                .addComponent(btnSave)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSave)
+                    .addComponent(btnupdate)
+                    .addComponent(btnReset)
+                    .addComponent(btnDelate))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -209,6 +239,35 @@ public class NewJFrame extends javax.swing.JFrame {
         
 
     }//GEN-LAST:event_btnSaveMouseClicked
+
+    private void btnupdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnupdateMouseClicked
+        // TODO add your handling code here:
+        sql = "update form set name= ?, reg=? where  roll=?";
+      
+        try {
+            ps = con.getCon().prepareStatement(sql);
+            
+            ps.setString(1,txtName.getText().trim());
+            ps.setString(2,txtReg.getText().trim());
+          
+            
+              ps.setInt(3,Integer.parseInt(txtRoll.getText().trim()));
+            
+            
+            ps.executeUpdate();
+            ps.close();
+            con.getCon().close();
+            
+            JOptionPane.showMessageDialog(rootPane, "Date Updated");
+            reset();
+            getAllStudent();
+            
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(rootPane, "Data not Updated");
+            Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_btnupdateMouseClicked
 
     /**
      * @param args the command line arguments
@@ -246,7 +305,10 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDelate;
+    private javax.swing.JButton btnReset;
     private javax.swing.JButton btnSave;
+    private javax.swing.JButton btnupdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
