@@ -27,12 +27,12 @@ public class DashBorad extends javax.swing.JFrame {
     String sql = "";
     ResultSet rs;
     
-    String [] productColumns ={"Purchase ID", "Product Name","Product catagory", "Product code"};
+    String [] productColumns ={"Product ID", "Product Name","Product catagory", "Product code"};
     public void getAllProduct(){
         DefaultTableModel model = new DefaultTableModel();
         model.setColumnIdentifiers(productColumns);
         
-        tableproduct.setModel(model);
+        tableProduct.setModel(model);
         sql= "select * from product";
         
         
@@ -41,12 +41,15 @@ public class DashBorad extends javax.swing.JFrame {
             rs= ps.executeQuery();
             while(rs.next()){
                 int id = rs.getInt("purchaseId");
-                String name = rs.getString("nmae");
+                String name = rs.getString("name");
                 String catagory = rs.getString("catagory");
                 String code = rs.getString("productCode");
                 
                 model.addRow(new Object[]{id,name,catagory,code});
             }
+            rs.close();
+            ps.close();
+            con.getCon().close();
         } catch (SQLException ex) {
             Logger.getLogger(DashBorad.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -61,6 +64,12 @@ public class DashBorad extends javax.swing.JFrame {
     public DashBorad() {
         initComponents();
         getAllProduct();
+    }
+    public void reset(){
+        txtProductId.setText(null);
+        txtProductName.setText(null);
+        txtPCatagory.setText(null);
+        txtProductCode.setText(null);
     }
 //calculate total price
     public float getTotalPrice(){
@@ -213,9 +222,9 @@ public class DashBorad extends javax.swing.JFrame {
         btnPsave = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         btnPdelate = new javax.swing.JButton();
-        btnPreset = new javax.swing.JButton();
+        btnRreset = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tableproduct = new javax.swing.JTable();
+        tableProduct = new javax.swing.JTable();
         report = new javax.swing.JTabbedPane();
         jPanel16 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
@@ -796,12 +805,27 @@ public class DashBorad extends javax.swing.JFrame {
         });
 
         jButton7.setText("Update");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
 
         btnPdelate.setText("Delate ");
+        btnPdelate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnPdelateMouseClicked(evt);
+            }
+        });
 
-        btnPreset.setText("Reset");
+        btnRreset.setText("Reset");
+        btnRreset.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnRresetMouseClicked(evt);
+            }
+        });
 
-        tableproduct.setModel(new javax.swing.table.DefaultTableModel(
+        tableProduct.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -812,7 +836,12 @@ public class DashBorad extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(tableproduct);
+        tableProduct.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tableProductMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(tableProduct);
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -841,7 +870,7 @@ public class DashBorad extends javax.swing.JFrame {
                             .addComponent(btnPdelate))
                         .addGap(71, 71, 71)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnPreset)
+                            .addComponent(btnRreset)
                             .addComponent(jButton7))))
                 .addGap(54, 54, 54)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -876,7 +905,7 @@ public class DashBorad extends javax.swing.JFrame {
                         .addGap(64, 64, 64)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnPdelate)
-                            .addComponent(btnPreset)))
+                            .addComponent(btnRreset)))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 28, Short.MAX_VALUE))
         );
@@ -1189,6 +1218,76 @@ public class DashBorad extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnPsaveMouseEntered
 
+    private void btnRresetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRresetMouseClicked
+        // TODO add your handling code here:
+        reset();
+    }//GEN-LAST:event_btnRresetMouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        // TODO add your handling code here:
+        
+         sql = "UPDATE product SET name=?, catagory=? WHERE productCode=?";
+        
+        try {
+            ps = con.getCon().prepareStatement(sql);
+            
+            ps.setString(1, txtProductName.getText().trim());
+            ps.setString(2, txtProductCode.getText().trim());
+            ps.setString(3, txtPCatagory.getText().trim());
+            
+            ps.executeUpdate();
+            ps.close();
+            con.getCon().close();
+            getAllProduct();
+            
+            JOptionPane.showMessageDialog(rootPane, "Data Updated");
+            reset();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(rootPane, "Data not Update");
+            Logger.getLogger(DashBorad.class.getName()).log(Level.SEVERE, null, ex);
+            
+        }
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void tableProductMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableProductMouseClicked
+        // TODO add your handling code here:
+        int rowIndex = tableProduct.getSelectedRow();
+        String id = tableProduct.getModel().getValueAt(rowIndex, 0).toString();
+        String name = tableProduct.getModel().getValueAt(rowIndex,1).toString();
+        String catagory = tableProduct.getModel().getValueAt(rowIndex,2).toString();
+        String productCode = tableProduct.getModel().getValueAt(rowIndex,3).toString();
+        
+        
+        txtProductId.setText(id);
+        txtProductName.setText(name);
+        txtPCatagory.setText(catagory);
+        txtProductCode.setText(productCode);
+    }//GEN-LAST:event_tableProductMouseClicked
+
+    private void btnPdelateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPdelateMouseClicked
+        // TODO add your handling code here:
+        sql ="Delete from product where purchaseID =?";
+        
+        try {
+            ps = con.getCon().prepareStatement(sql);
+            ps.setInt(1, Integer.parseInt(txtProductId.getText().trim()));
+           
+            
+            ps.executeUpdate();
+            ps.close();
+            con.getCon().close();
+            
+            JOptionPane.showMessageDialog(rootPane, "Data Deleted");
+            reset();
+            getAllProduct();
+        } catch (SQLException ex) {
+            Logger.getLogger(DashBorad.class.getName()).log(Level.SEVERE, null, ex);
+             JOptionPane.showMessageDialog(rootPane, "Data not Delete");
+        }
+        
+        
+    }//GEN-LAST:event_btnPdelateMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1228,7 +1327,6 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JButton btn4;
     private javax.swing.JButton btnHome;
     private javax.swing.JButton btnPdelate;
-    private javax.swing.JButton btnPreset;
     private javax.swing.JButton btnPsave;
     private javax.swing.JButton btnPurchase;
     private javax.swing.JPanel btnPurchaseDelate;
@@ -1236,6 +1334,7 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JButton btnPurchaseSave;
     private javax.swing.JButton btnPurchaseUpdate;
     private javax.swing.JButton btnReport;
+    private javax.swing.JButton btnRreset;
     private javax.swing.JButton btnSalesSubmit;
     private javax.swing.JButton btnSalse;
     private com.toedter.calendar.JDateChooser dateSalesDate;
@@ -1330,7 +1429,7 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JTabbedPane purchase;
     private javax.swing.JTabbedPane report;
     private javax.swing.JTabbedPane sales;
-    private javax.swing.JTable tableproduct;
+    private javax.swing.JTable tableProduct;
     private javax.swing.JTextField txtPCatagory;
     private javax.swing.JTextField txtProductCode;
     private javax.swing.JTextField txtProductId;
