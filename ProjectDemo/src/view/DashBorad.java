@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import util.DbCon1;
 
 /**
@@ -26,6 +27,32 @@ public class DashBorad extends javax.swing.JFrame {
     String sql = "";
     ResultSet rs;
     
+    String [] productColumns ={"Purchase ID", "Product Name","Product catagory", "Product code"};
+    public void getAllProduct(){
+        DefaultTableModel model = new DefaultTableModel();
+        model.setColumnIdentifiers(productColumns);
+        
+        tableproduct.setModel(model);
+        sql= "select * from product";
+        
+        
+        try {
+            ps= con.getCon().prepareStatement(sql);
+            rs= ps.executeQuery();
+            while(rs.next()){
+                int id = rs.getInt("purchaseId");
+                String name = rs.getString("nmae");
+                String catagory = rs.getString("catagory");
+                String code = rs.getString("productCode");
+                
+                model.addRow(new Object[]{id,name,catagory,code});
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(DashBorad.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                
+    }
+    
   
             
     /**
@@ -33,6 +60,7 @@ public class DashBorad extends javax.swing.JFrame {
      */
     public DashBorad() {
         initComponents();
+        getAllProduct();
     }
 //calculate total price
     public float getTotalPrice(){
@@ -147,7 +175,7 @@ public class DashBorad extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         txtSalesActualPrice = new javax.swing.JTextField();
         purchase = new javax.swing.JTabbedPane();
-        jPanel12 = new javax.swing.JPanel();
+        btnPurchaseDelate = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
@@ -163,10 +191,10 @@ public class DashBorad extends javax.swing.JFrame {
         jTextField9 = new javax.swing.JTextField();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jComboBox2 = new javax.swing.JComboBox<>();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnPurchaseSave = new javax.swing.JButton();
+        btnPurchaseUpdate = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btnPurchaseReset = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         product = new javax.swing.JTabbedPane();
@@ -180,12 +208,14 @@ public class DashBorad extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         txtProductId = new javax.swing.JTextField();
         txtProductName = new javax.swing.JTextField();
-        txtCatagory = new javax.swing.JTextField();
+        txtPCatagory = new javax.swing.JTextField();
         txtProductCode = new javax.swing.JTextField();
         btnPsave = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         btnPdelate = new javax.swing.JButton();
         btnPreset = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tableproduct = new javax.swing.JTable();
         report = new javax.swing.JTabbedPane();
         jPanel16 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
@@ -532,7 +562,7 @@ public class DashBorad extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1244, Short.MAX_VALUE)
+            .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1268, Short.MAX_VALUE)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(61, 61, 61)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -587,7 +617,7 @@ public class DashBorad extends javax.swing.JFrame {
                             .addComponent(jButton2)
                             .addComponent(dateSalesDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(txtSaleQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(582, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -639,14 +669,14 @@ public class DashBorad extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalesSubmit)
                     .addComponent(jButton2))
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         sales.addTab("tab1", jPanel5);
 
         menu.addTab("tab2", sales);
 
-        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btnPurchaseDelate.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel13.setBackground(new java.awt.Color(204, 204, 204));
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -656,48 +686,53 @@ public class DashBorad extends javax.swing.JFrame {
         jLabel15.setText("Purchase");
         jPanel13.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 100));
 
-        jPanel12.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        btnPurchaseDelate.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel12.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, -1, -1));
+        btnPurchaseDelate.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, -1, -1));
 
         jLabel16.setText("Unit Price");
-        jPanel12.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
+        btnPurchaseDelate.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
         jLabel17.setText("Product ID");
-        jPanel12.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
+        btnPurchaseDelate.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
         jLabel18.setText("Quantity");
-        jPanel12.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
+        btnPurchaseDelate.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
         jLabel19.setText("Product Name");
-        jPanel12.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
+        btnPurchaseDelate.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
 
         jLabel20.setText("Total Price");
-        jPanel12.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
+        btnPurchaseDelate.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
 
         jLabel21.setText("Date");
-        jPanel12.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 304, -1, 20));
-        jPanel12.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 150, -1));
-        jPanel12.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 150, -1));
-        jPanel12.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 150, -1));
-        jPanel12.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 150, -1));
-        jPanel12.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 150, -1));
+        btnPurchaseDelate.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, 20));
+        btnPurchaseDelate.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 150, -1));
+        btnPurchaseDelate.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 150, -1));
+        btnPurchaseDelate.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 150, -1));
+        btnPurchaseDelate.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 150, -1));
+        btnPurchaseDelate.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 150, -1));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel12.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 150, -1));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
+        btnPurchaseDelate.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 150, -1));
 
-        jButton3.setText("Save");
-        jPanel12.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
+        btnPurchaseSave.setText("Save");
+        btnPurchaseDelate.add(btnPurchaseSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
 
-        jButton4.setText("Update");
-        jPanel12.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, -1, -1));
+        btnPurchaseUpdate.setText("Update");
+        btnPurchaseDelate.add(btnPurchaseUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, -1, -1));
 
         jButton5.setText("Delate");
-        jPanel12.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, -1, -1));
+        btnPurchaseDelate.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, -1, -1));
 
-        jButton6.setText("Reset");
-        jPanel12.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, -1, -1));
+        btnPurchaseReset.setText("Reset");
+        btnPurchaseDelate.add(btnPurchaseReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, -1, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -712,9 +747,9 @@ public class DashBorad extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel12.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 120, -1, 240));
+        btnPurchaseDelate.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 120, -1, 240));
 
-        purchase.addTab("tab1", jPanel12);
+        purchase.addTab("tab1", btnPurchaseDelate);
 
         menu.addTab("tab3", purchase);
 
@@ -755,6 +790,9 @@ public class DashBorad extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnPsaveMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnPsaveMouseEntered(evt);
+            }
         });
 
         jButton7.setText("Update");
@@ -762,6 +800,19 @@ public class DashBorad extends javax.swing.JFrame {
         btnPdelate.setText("Delate ");
 
         btnPreset.setText("Reset");
+
+        tableproduct.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(tableproduct);
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -781,7 +832,7 @@ public class DashBorad extends javax.swing.JFrame {
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtProductId)
                             .addComponent(txtProductName, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                            .addComponent(txtCatagory)
+                            .addComponent(txtPCatagory)
                             .addComponent(txtProductCode)))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGap(49, 49, 49)
@@ -792,37 +843,42 @@ public class DashBorad extends javax.swing.JFrame {
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnPreset)
                             .addComponent(jButton7))))
-                .addContainerGap(944, Short.MAX_VALUE))
+                .addGap(54, 54, 54)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(447, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
-                    .addComponent(txtProductId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel24)
-                    .addComponent(txtProductName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel25)
-                    .addComponent(txtCatagory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel26)
-                    .addComponent(txtProductCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(74, 74, 74)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnPsave)
-                    .addComponent(jButton7))
-                .addGap(64, 64, 64)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnPdelate)
-                    .addComponent(btnPreset))
-                .addGap(0, 92, Short.MAX_VALUE))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel23)
+                            .addComponent(txtProductId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(38, 38, 38)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel24)
+                            .addComponent(txtProductName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel25)
+                            .addComponent(txtPCatagory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(39, 39, 39)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel26)
+                            .addComponent(txtProductCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(74, 74, 74)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnPsave)
+                            .addComponent(jButton7))
+                        .addGap(64, 64, 64)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnPdelate)
+                            .addComponent(btnPreset)))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 28, Short.MAX_VALUE))
         );
 
         product.addTab("product", jPanel11);
@@ -1103,9 +1159,20 @@ public class DashBorad extends javax.swing.JFrame {
          sql = "insert into product(name, catagory, productCode) values(?,?,?)";
         try {
             ps = con.getCon().prepareStatement(sql);
-            ps.setString(PROPERTIES, sql);
+            ps.setString(1, txtProductName.getText().trim());
+            ps.setString(2, txtPCatagory.getText().trim());
+            ps.setString(3, txtProductCode.getText().trim());
+            
+            ps.executeUpdate();
+            ps.close();
+            con.getCon().close();
+            
+            
+            JOptionPane.showMessageDialog(rootPane, "Data Saved");
+            getAllProduct();
         } catch (SQLException ex) {
             Logger.getLogger(DashBorad.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(rootPane, "Data not Saved");
         }
         
     }//GEN-LAST:event_btnPsaveMouseClicked
@@ -1113,6 +1180,14 @@ public class DashBorad extends javax.swing.JFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void btnPsaveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPsaveMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPsaveMouseEntered
 
     /**
      * @param args the command line arguments
@@ -1156,16 +1231,17 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JButton btnPreset;
     private javax.swing.JButton btnPsave;
     private javax.swing.JButton btnPurchase;
+    private javax.swing.JPanel btnPurchaseDelate;
+    private javax.swing.JButton btnPurchaseReset;
+    private javax.swing.JButton btnPurchaseSave;
+    private javax.swing.JButton btnPurchaseUpdate;
     private javax.swing.JButton btnReport;
     private javax.swing.JButton btnSalesSubmit;
     private javax.swing.JButton btnSalse;
     private com.toedter.calendar.JDateChooser dateSalesDate;
     private javax.swing.JPanel home;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JComboBox<String> jComboBox1;
@@ -1211,7 +1287,6 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
@@ -1237,6 +1312,7 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField3;
@@ -1254,7 +1330,8 @@ public class DashBorad extends javax.swing.JFrame {
     private javax.swing.JTabbedPane purchase;
     private javax.swing.JTabbedPane report;
     private javax.swing.JTabbedPane sales;
-    private javax.swing.JTextField txtCatagory;
+    private javax.swing.JTable tableproduct;
+    private javax.swing.JTextField txtPCatagory;
     private javax.swing.JTextField txtProductCode;
     private javax.swing.JTextField txtProductId;
     private javax.swing.JTextField txtProductName;
