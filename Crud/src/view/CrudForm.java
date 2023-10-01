@@ -100,6 +100,7 @@ public class CrudForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel5 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -121,6 +122,17 @@ public class CrudForm extends javax.swing.JFrame {
         btnDelate = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblStudent = new javax.swing.JTable();
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -171,7 +183,7 @@ public class CrudForm extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addGap(50, 50, 50)
                 .addComponent(jLabel6)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(182, Short.MAX_VALUE))
         );
 
         jPanel4.setBackground(new java.awt.Color(204, 255, 204));
@@ -376,23 +388,27 @@ public class CrudForm extends javax.swing.JFrame {
     private void btnUpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdateMouseClicked
         // TODO add your handling code here:
         
-        sql = "update student set name =?, roll=? where reg= ?";
+        sql = "update student set name =?,  reg=?, date=?, subject=? where roll=?";
         
    try {
             ps = con.getCon().prepareStatement(sql);
 
             ps.setString(1, txtName.getText().trim());
-            ps.setInt(2, Integer.parseInt(txtRoll.getText().trim()));
-            ps.setInt(3, Integer.parseInt(txtReg.getText().trim()));
+            
+            ps.setInt(2, Integer.parseInt(txtReg.getText().trim()));
+            ps.setDate(3,ConvertSqlDate(dobDate.getDate()));
             ps.setString(4, comboSubject.getSelectedItem().toString());
-            ps.setDate(5,ConvertSqlDate(dobDate.getDate()));
+            ps.setInt(5, Integer.parseInt(txtRoll.getText().trim()));
+            
+            
 
             ps.executeUpdate();
             ps.close();
             con.getCon().close();
-            getAllStudent();
+            
 
             JOptionPane.showMessageDialog(rootPane, "Data Updated");
+            getAllStudent();
             reset();
             
 
@@ -486,6 +502,7 @@ public class CrudForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblStudent;
     private javax.swing.JTextField txtName;
