@@ -2,8 +2,11 @@ package view;
 
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JOptionPane;
 
 public class LoginForm extends javax.swing.JFrame {
+    //dashbord show method
+    DashBoard bord = new DashBoard();
 
     public LoginForm() {
         initComponents();
@@ -199,6 +202,24 @@ public class LoginForm extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
+        String userName="tushar@gmail.com";
+        String pass="1234";
+        
+        String userNameU=txtEmail.getText().trim();
+        String passU=txtpassword.getText().trim();
+        
+        if(userName.equalsIgnoreCase(userNameU) && pass.equals(passU)){
+        
+            JOptionPane.showMessageDialog(rootPane, "Welcome to the tech world");
+            dispose();
+            bord.setVisible(true);
+           
+            
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "User name or password is incorrect");
+        
+    }                     
         String email = txtEmail.getText().trim();
 
         String pattern = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
