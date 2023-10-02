@@ -1,18 +1,14 @@
-
 package view;
 
 import java.awt.Color;
 import java.awt.Font;
 
-
 public class LoginForm extends javax.swing.JFrame {
 
-   
     public LoginForm() {
         initComponents();
     }
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -41,7 +37,7 @@ public class LoginForm extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 500));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/finaltechman.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/techmanLast.png"))); // NOI18N
         jLabel8.setPreferredSize(new java.awt.Dimension(243, 234));
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
@@ -187,34 +183,32 @@ public class LoginForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-//        SignUp sign = new SignUp();
-//        sign.setVisible(true);
-//        sign.pack();
-//       sign.setLocationRelativeTo(null);
-//       this.dispose();
+
+        SignUp sign = new SignUp();
+        sign.setVisible(true);
+        sign.pack();
+        sign.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
-  
-        
-        
+
+
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        String email=txtEmail.getText().trim();
-        
-        String pattern="^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
-        
-        if(email.matches(pattern)){
-        
+        String email = txtEmail.getText().trim();
+
+        String pattern = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
+
+        if (email.matches(pattern)) {
+
             lblInputEmail.setText("Email is Valied ");
             lblInputEmail.setForeground(Color.BLUE);
             lblInputEmail.setFont(new Font("Serif", Font.PLAIN, 18));
-        }
-        else{
+        } else {
             lblInputEmail.setText("Email is Invalied ");
             lblInputEmail.setForeground(Color.RED);
             lblInputEmail.setFont(new Font("Serif", Font.PLAIN, 18));
@@ -225,6 +219,37 @@ public class LoginForm extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new LoginForm().setVisible(true);
+            }
+        });
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
