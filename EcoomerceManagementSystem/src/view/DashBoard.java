@@ -26,23 +26,40 @@ public class DashBoard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
+        btnHome = new javax.swing.JButton();
+        btnSales = new javax.swing.JButton();
+        btnPurchase = new javax.swing.JButton();
+        btnCustomer = new javax.swing.JButton();
+        btnGadgets = new javax.swing.JButton();
+        btnStock = new javax.swing.JButton();
+        btnBill = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
+        btnReport = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         menu = new javax.swing.JTabbedPane();
         home = new javax.swing.JTabbedPane();
+        jPanel15 = new javax.swing.JPanel();
+        jPanel16 = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
         sales = new javax.swing.JTabbedPane();
+        jPanel18 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         purchase = new javax.swing.JTabbedPane();
         customer = new javax.swing.JTabbedPane();
         accessories = new javax.swing.JTabbedPane();
@@ -52,6 +69,13 @@ public class DashBoard extends javax.swing.JFrame {
         jTabbedPane10 = new javax.swing.JTabbedPane();
         jTabbedPane11 = new javax.swing.JTabbedPane();
         jTabbedPane12 = new javax.swing.JTabbedPane();
+
+        jPanel3.add(jPanel4);
+
+        jPanel7.add(jPanel8);
+
+        jPanel9.add(jPanel10);
+        jPanel9.add(jPanel11);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1280, 680));
@@ -73,111 +97,142 @@ public class DashBoard extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(102, 102, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton4.setBackground(new java.awt.Color(0, 204, 204));
-        jButton4.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/homelast.png"))); // NOI18N
-        jButton4.setText("HOME");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnHome.setBackground(new java.awt.Color(0, 204, 204));
+        btnHome.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        btnHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/homelast.png"))); // NOI18N
+        btnHome.setText("HOME");
+        btnHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnHomeActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 30));
+        jPanel1.add(btnHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 30));
 
-        jButton5.setBackground(new java.awt.Color(0, 204, 204));
-        jButton5.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/sales.png"))); // NOI18N
-        jButton5.setText("SALES");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnSales.setBackground(new java.awt.Color(0, 204, 204));
+        btnSales.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        btnSales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/sales.png"))); // NOI18N
+        btnSales.setText("SALES");
+        btnSales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnSalesActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 140, 30));
+        jPanel1.add(btnSales, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 140, 30));
 
-        jButton6.setBackground(new java.awt.Color(0, 204, 204));
-        jButton6.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/purchase.png"))); // NOI18N
-        jButton6.setText("PURCHASE");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        btnPurchase.setBackground(new java.awt.Color(0, 204, 204));
+        btnPurchase.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        btnPurchase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/purchase.png"))); // NOI18N
+        btnPurchase.setText("PURCHASE");
+        btnPurchase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                btnPurchaseActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 140, 30));
+        jPanel1.add(btnPurchase, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 140, 30));
 
-        jButton7.setBackground(new java.awt.Color(0, 204, 204));
-        jButton7.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        jButton7.setIcon(new javax.swing.ImageIcon("C:\\Users\\user\\Desktop\\homelast.png")); // NOI18N
-        jButton7.setText("CUSTOMER");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        btnCustomer.setBackground(new java.awt.Color(0, 204, 204));
+        btnCustomer.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        btnCustomer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/customer.png"))); // NOI18N
+        btnCustomer.setText("CUSTOMER");
+        btnCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                btnCustomerActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 140, 30));
+        jPanel1.add(btnCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 140, 30));
 
-        jButton8.setBackground(new java.awt.Color(0, 204, 204));
-        jButton8.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/device.png"))); // NOI18N
-        jButton8.setText("GADGETS");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        btnGadgets.setBackground(new java.awt.Color(0, 204, 204));
+        btnGadgets.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        btnGadgets.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/device.png"))); // NOI18N
+        btnGadgets.setText("GADGETS");
+        btnGadgets.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                btnGadgetsActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 140, 30));
+        jPanel1.add(btnGadgets, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 140, 30));
 
-        jButton9.setBackground(new java.awt.Color(0, 204, 204));
-        jButton9.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/cart.png"))); // NOI18N
-        jButton9.setText("STOCK");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        btnStock.setBackground(new java.awt.Color(0, 204, 204));
+        btnStock.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        btnStock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/cart.png"))); // NOI18N
+        btnStock.setText("STOCK");
+        btnStock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                btnStockActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 140, 30));
+        jPanel1.add(btnStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 140, 30));
 
-        jButton10.setBackground(new java.awt.Color(0, 204, 204));
-        jButton10.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/bill.png"))); // NOI18N
-        jButton10.setText("BILL");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        btnBill.setBackground(new java.awt.Color(0, 204, 204));
+        btnBill.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        btnBill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/bill.png"))); // NOI18N
+        btnBill.setText("BILL");
+        btnBill.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                btnBillActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 140, 30));
+        jPanel1.add(btnBill, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 140, 30));
 
-        jButton11.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        jButton11.setForeground(new java.awt.Color(255, 51, 51));
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/turn-off.png"))); // NOI18N
-        jButton11.setText("LOG OUT");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 140, 30));
+        btnLogout.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        btnLogout.setForeground(new java.awt.Color(255, 51, 51));
+        btnLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/turn-off.png"))); // NOI18N
+        btnLogout.setText("LOG OUT");
+        jPanel1.add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 140, 30));
 
-        jButton12.setBackground(new java.awt.Color(0, 204, 204));
-        jButton12.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/report.png"))); // NOI18N
-        jButton12.setText("REPORT");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        btnReport.setBackground(new java.awt.Color(0, 204, 204));
+        btnReport.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        btnReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/report.png"))); // NOI18N
+        btnReport.setText("REPORT");
+        btnReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                btnReportActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 140, 30));
+        jPanel1.add(btnReport, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 140, 30));
 
         jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 160, 550));
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home.setBackground(new java.awt.Color(0, 204, 204));
+
+        jPanel15.add(jPanel16);
+        jPanel15.add(jPanel17);
+
+        home.addTab("tab1", jPanel15);
+
         menu.addTab("menu", home);
+
+        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel13.setBackground(new java.awt.Color(191, 123, 150));
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("SALES");
+        jPanel13.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 120));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/discount (3).png"))); // NOI18N
+        jPanel13.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 80, 80));
+
+        jPanel12.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 120));
+
+        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/sales 3.jpg"))); // NOI18N
+        jPanel14.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 5, 1120, 590));
+
+        jPanel12.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 1140, 600));
+
+        jPanel18.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 670));
+
+        sales.addTab("tab1", jPanel18);
+
         menu.addTab("tab2", sales);
         menu.addTab("tab3", purchase);
         menu.addTab("tab4", customer);
@@ -189,7 +244,7 @@ public class DashBoard extends javax.swing.JFrame {
         menu.addTab("tab10", jTabbedPane11);
         menu.addTab("tab11", jTabbedPane12);
 
-        jPanel2.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1120, 580));
+        jPanel2.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -90, 1120, 640));
 
         jPanel5.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 1120, 550));
 
@@ -198,42 +253,39 @@ public class DashBoard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+    private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
         
-    }//GEN-LAST:event_jButton4ActionPerformed
+        menu.setSelectedIndex(0);
+    }//GEN-LAST:event_btnHomeActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void btnSalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalesActionPerformed
+        menu.setSelectedIndex(1);
+        
+    }//GEN-LAST:event_btnSalesActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void btnPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPurchaseActionPerformed
+        menu.setSelectedIndex(2);
+    }//GEN-LAST:event_btnPurchaseActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void btnCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCustomerActionPerformed
+        menu.setSelectedIndex(3);
+    }//GEN-LAST:event_btnCustomerActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    private void btnGadgetsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGadgetsActionPerformed
+        menu.setSelectedIndex(4);
+    }//GEN-LAST:event_btnGadgetsActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    private void btnStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStockActionPerformed
+        menu.setSelectedIndex(5);
+    }//GEN-LAST:event_btnStockActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+    private void btnBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBillActionPerformed
+        menu.setSelectedIndex(6);
+    }//GEN-LAST:event_btnBillActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
-
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
+    private void btnReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportActionPerformed
+        menu.setSelectedIndex(7);
+    }//GEN-LAST:event_btnReportActionPerformed
 
     /**
      * @param args the command line arguments
@@ -273,22 +325,39 @@ public class DashBoard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane accessories;
     private javax.swing.JTabbedPane bill;
+    private javax.swing.JButton btnBill;
+    private javax.swing.JButton btnCustomer;
+    private javax.swing.JButton btnGadgets;
+    private javax.swing.JButton btnHome;
+    private javax.swing.JButton btnLogout;
+    private javax.swing.JButton btnPurchase;
+    private javax.swing.JButton btnReport;
+    private javax.swing.JButton btnSales;
+    private javax.swing.JButton btnStock;
     private javax.swing.JTabbedPane customer;
     private javax.swing.JTabbedPane home;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JTabbedPane jTabbedPane10;
     private javax.swing.JTabbedPane jTabbedPane11;
     private javax.swing.JTabbedPane jTabbedPane12;
