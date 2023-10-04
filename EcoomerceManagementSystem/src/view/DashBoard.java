@@ -108,7 +108,6 @@ public class DashBoard extends javax.swing.JFrame {
 
         jButton7.setBackground(new java.awt.Color(0, 204, 204));
         jButton7.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        jButton7.setIcon(new javax.swing.ImageIcon("C:\\Users\\user\\Desktop\\homelast.png")); // NOI18N
         jButton7.setText("CUSTOMER");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
