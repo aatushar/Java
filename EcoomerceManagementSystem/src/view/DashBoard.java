@@ -26,40 +26,56 @@ public class DashBoard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
-        jPanel11 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        btnHome = new javax.swing.JButton();
-        btnSales = new javax.swing.JButton();
-        btnPurchase = new javax.swing.JButton();
-        btnCustomer = new javax.swing.JButton();
-        btnGadgets = new javax.swing.JButton();
-        btnStock = new javax.swing.JButton();
-        btnBill = new javax.swing.JButton();
-        btnLogout = new javax.swing.JButton();
-        btnReport = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         menu = new javax.swing.JTabbedPane();
         home = new javax.swing.JTabbedPane();
-        jPanel15 = new javax.swing.JPanel();
-        jPanel16 = new javax.swing.JPanel();
-        jPanel17 = new javax.swing.JPanel();
         sales = new javax.swing.JTabbedPane();
-        jPanel18 = new javax.swing.JPanel();
-        jPanel12 = new javax.swing.JPanel();
-        jPanel13 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jPanel14 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        txtPid = new javax.swing.JTextField();
+        txtPname = new javax.swing.JComboBox<>();
+        txtSalesUnitPrice = new javax.swing.JTextField();
+        txtSalesQuantity = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         purchase = new javax.swing.JTabbedPane();
         customer = new javax.swing.JTabbedPane();
         accessories = new javax.swing.JTabbedPane();
@@ -69,13 +85,6 @@ public class DashBoard extends javax.swing.JFrame {
         jTabbedPane10 = new javax.swing.JTabbedPane();
         jTabbedPane11 = new javax.swing.JTabbedPane();
         jTabbedPane12 = new javax.swing.JTabbedPane();
-
-        jPanel3.add(jPanel4);
-
-        jPanel7.add(jPanel8);
-
-        jPanel9.add(jPanel10);
-        jPanel9.add(jPanel11);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1280, 680));
@@ -97,148 +106,204 @@ public class DashBoard extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(102, 102, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnHome.setBackground(new java.awt.Color(0, 204, 204));
-        btnHome.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        btnHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/homelast.png"))); // NOI18N
-        btnHome.setText("HOME");
-        btnHome.addActionListener(new java.awt.event.ActionListener() {
+        jButton4.setBackground(new java.awt.Color(0, 204, 204));
+        jButton4.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/homelast.png"))); // NOI18N
+        jButton4.setText("HOME");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHomeActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 30));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 140, 30));
 
-        btnSales.setBackground(new java.awt.Color(0, 204, 204));
-        btnSales.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        btnSales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/sales.png"))); // NOI18N
-        btnSales.setText("SALES");
-        btnSales.addActionListener(new java.awt.event.ActionListener() {
+        jButton5.setBackground(new java.awt.Color(0, 204, 204));
+        jButton5.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/sales.png"))); // NOI18N
+        jButton5.setText("SALES");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalesActionPerformed(evt);
+                jButton5ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSales, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 140, 30));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 140, 30));
 
-        btnPurchase.setBackground(new java.awt.Color(0, 204, 204));
-        btnPurchase.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        btnPurchase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/purchase.png"))); // NOI18N
-        btnPurchase.setText("PURCHASE");
-        btnPurchase.addActionListener(new java.awt.event.ActionListener() {
+        jButton6.setBackground(new java.awt.Color(0, 204, 204));
+        jButton6.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/purchase.png"))); // NOI18N
+        jButton6.setText("PURCHASE");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPurchaseActionPerformed(evt);
+                jButton6ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnPurchase, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 140, 30));
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 140, 30));
 
-<<<<<<< HEAD
-        btnCustomer.setBackground(new java.awt.Color(0, 204, 204));
-        btnCustomer.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        btnCustomer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/customer.png"))); // NOI18N
-        btnCustomer.setText("CUSTOMER");
-        btnCustomer.addActionListener(new java.awt.event.ActionListener() {
-=======
         jButton7.setBackground(new java.awt.Color(0, 204, 204));
         jButton7.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/customer.png"))); // NOI18N
         jButton7.setText("CUSTOMER");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> 2ff82d65cdf5a6d7f286b8fe1dc5fe6cbfe5fbf1
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCustomerActionPerformed(evt);
+                jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 140, 30));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 140, 30));
 
-        btnGadgets.setBackground(new java.awt.Color(0, 204, 204));
-        btnGadgets.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        btnGadgets.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/device.png"))); // NOI18N
-        btnGadgets.setText("GADGETS");
-        btnGadgets.addActionListener(new java.awt.event.ActionListener() {
+        jButton8.setBackground(new java.awt.Color(0, 204, 204));
+        jButton8.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/device.png"))); // NOI18N
+        jButton8.setText("GADGETS");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGadgetsActionPerformed(evt);
+                jButton8ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGadgets, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 140, 30));
+        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 140, 30));
 
-        btnStock.setBackground(new java.awt.Color(0, 204, 204));
-        btnStock.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        btnStock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/cart.png"))); // NOI18N
-        btnStock.setText("STOCK");
-        btnStock.addActionListener(new java.awt.event.ActionListener() {
+        jButton9.setBackground(new java.awt.Color(0, 204, 204));
+        jButton9.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/cart.png"))); // NOI18N
+        jButton9.setText("STOCK");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnStockActionPerformed(evt);
+                jButton9ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 140, 30));
+        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 140, 30));
 
-        btnBill.setBackground(new java.awt.Color(0, 204, 204));
-        btnBill.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        btnBill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/bill.png"))); // NOI18N
-        btnBill.setText("BILL");
-        btnBill.addActionListener(new java.awt.event.ActionListener() {
+        jButton10.setBackground(new java.awt.Color(0, 204, 204));
+        jButton10.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/bill.png"))); // NOI18N
+        jButton10.setText("BILL");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBillActionPerformed(evt);
+                jButton10ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBill, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 140, 30));
+        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 140, 30));
 
-        btnLogout.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        btnLogout.setForeground(new java.awt.Color(255, 51, 51));
-        btnLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/turn-off.png"))); // NOI18N
-        btnLogout.setText("LOG OUT");
-        jPanel1.add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 140, 30));
-
-        btnReport.setBackground(new java.awt.Color(0, 204, 204));
-        btnReport.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
-        btnReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/report.png"))); // NOI18N
-        btnReport.setText("REPORT");
-        btnReport.addActionListener(new java.awt.event.ActionListener() {
+        jButton11.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        jButton11.setForeground(new java.awt.Color(255, 51, 51));
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/turn-off.png"))); // NOI18N
+        jButton11.setText("LOG OUT");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReportActionPerformed(evt);
+                jButton11ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnReport, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 140, 30));
+        jPanel1.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 140, 30));
+
+        jButton12.setBackground(new java.awt.Color(0, 204, 204));
+        jButton12.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/report.png"))); // NOI18N
+        jButton12.setText("REPORT");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 140, 30));
 
         jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 160, 550));
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home.setBackground(new java.awt.Color(0, 204, 204));
-
-        jPanel15.add(jPanel16);
-        jPanel15.add(jPanel17);
-
-        home.addTab("tab1", jPanel15);
-
         menu.addTab("menu", home);
 
-        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel13.setBackground(new java.awt.Color(191, 123, 150));
-        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel7.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI Symbol", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("SALES");
-        jPanel13.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 120));
+        jLabel2.setText("Sales");
+        jPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 1, 1210, 120));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/discount (3).png"))); // NOI18N
-        jPanel13.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 80, 80));
+        jPanel4.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 120));
+        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
 
-        jPanel12.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 120));
+        jLabel4.setText("PID");
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 40, -1));
 
-        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel5.setText("Product Name");
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/sales 3.jpg"))); // NOI18N
-        jPanel14.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 5, 1120, 590));
+        jLabel6.setText("Unit Price");
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
-        jPanel12.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 1140, 600));
+        jLabel7.setText("Quantity");
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
 
-        jPanel18.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 670));
+        jLabel8.setText("Total price");
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
 
-        sales.addTab("tab1", jPanel18);
+        jLabel9.setText("Discount");
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
+
+        jLabel10.setText("Actual Price");
+        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, -1, -1));
+
+        jLabel11.setText("Cash Recived");
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, -1, -1));
+
+        jLabel12.setText("Due Amount");
+        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, -1, -1));
+
+        jLabel13.setText("Date");
+        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 560, -1, -1));
+
+        jLabel14.setText("Customer Name");
+        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 610, -1, -1));
+        jPanel4.add(txtPid, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 210, -1));
+
+        txtPname.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel4.add(txtPname, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 210, -1));
+        jPanel4.add(txtSalesUnitPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 210, -1));
+        jPanel4.add(txtSalesQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 210, -1));
+        jPanel4.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, 210, -1));
+        jPanel4.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 210, -1));
+        jPanel4.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 210, -1));
+        jPanel4.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 450, 210, -1));
+        jPanel4.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 500, 210, -1));
+        jPanel4.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 600, 210, -1));
+        jPanel4.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 550, 210, -1));
+
+        jButton1.setText("Save");
+        jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, -1, -1));
+
+        jButton2.setText("Update");
+        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 360, -1, -1));
+
+        jButton3.setText("Delete");
+        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, -1, -1));
+
+        jButton13.setText("Reset");
+        jPanel4.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 470, -1, -1));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, 530, 510));
+
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 690));
+
+        sales.addTab("tab1", jPanel3);
 
         menu.addTab("tab2", sales);
         menu.addTab("tab3", purchase);
@@ -251,7 +316,7 @@ public class DashBoard extends javax.swing.JFrame {
         menu.addTab("tab10", jTabbedPane11);
         menu.addTab("tab11", jTabbedPane12);
 
-        jPanel2.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -90, 1120, 640));
+        jPanel2.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -80, 1120, 630));
 
         jPanel5.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 1120, 550));
 
@@ -260,39 +325,42 @@ public class DashBoard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
         
-        menu.setSelectedIndex(0);
-    }//GEN-LAST:event_btnHomeActionPerformed
+    }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void btnSalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalesActionPerformed
-        menu.setSelectedIndex(1);
-        
-    }//GEN-LAST:event_btnSalesActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void btnPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPurchaseActionPerformed
-        menu.setSelectedIndex(2);
-    }//GEN-LAST:event_btnPurchaseActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void btnCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCustomerActionPerformed
-        menu.setSelectedIndex(3);
-    }//GEN-LAST:event_btnCustomerActionPerformed
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void btnGadgetsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGadgetsActionPerformed
-        menu.setSelectedIndex(4);
-    }//GEN-LAST:event_btnGadgetsActionPerformed
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void btnStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStockActionPerformed
-        menu.setSelectedIndex(5);
-    }//GEN-LAST:event_btnStockActionPerformed
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
 
-    private void btnBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBillActionPerformed
-        menu.setSelectedIndex(6);
-    }//GEN-LAST:event_btnBillActionPerformed
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
 
-    private void btnReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportActionPerformed
-        menu.setSelectedIndex(7);
-    }//GEN-LAST:event_btnReportActionPerformed
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -332,46 +400,62 @@ public class DashBoard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane accessories;
     private javax.swing.JTabbedPane bill;
-    private javax.swing.JButton btnBill;
-    private javax.swing.JButton btnCustomer;
-    private javax.swing.JButton btnGadgets;
-    private javax.swing.JButton btnHome;
-    private javax.swing.JButton btnLogout;
-    private javax.swing.JButton btnPurchase;
-    private javax.swing.JButton btnReport;
-    private javax.swing.JButton btnSales;
-    private javax.swing.JButton btnStock;
     private javax.swing.JTabbedPane customer;
     private javax.swing.JTabbedPane home;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane10;
     private javax.swing.JTabbedPane jTabbedPane11;
     private javax.swing.JTabbedPane jTabbedPane12;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
     private javax.swing.JTabbedPane menu;
     private javax.swing.JTabbedPane purchase;
     private javax.swing.JTabbedPane report;
     private javax.swing.JTabbedPane sales;
     private javax.swing.JTabbedPane stock;
+    private javax.swing.JTextField txtPid;
+    private javax.swing.JComboBox<String> txtPname;
+    private javax.swing.JTextField txtSalesQuantity;
+    private javax.swing.JTextField txtSalesUnitPrice;
     // End of variables declaration//GEN-END:variables
 }
