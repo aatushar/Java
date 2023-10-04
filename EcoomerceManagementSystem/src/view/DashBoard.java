@@ -130,11 +130,18 @@ public class DashBoard extends javax.swing.JFrame {
         });
         jPanel1.add(btnPurchase, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 140, 30));
 
+<<<<<<< HEAD
         btnCustomer.setBackground(new java.awt.Color(0, 204, 204));
         btnCustomer.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
         btnCustomer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/customer.png"))); // NOI18N
         btnCustomer.setText("CUSTOMER");
         btnCustomer.addActionListener(new java.awt.event.ActionListener() {
+=======
+        jButton7.setBackground(new java.awt.Color(0, 204, 204));
+        jButton7.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
+        jButton7.setText("CUSTOMER");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> 2ff82d65cdf5a6d7f286b8fe1dc5fe6cbfe5fbf1
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCustomerActionPerformed(evt);
             }
