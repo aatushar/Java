@@ -1278,6 +1278,7 @@ public class DashBorad extends javax.swing.JFrame {
                 + "  values(?,?,?,?,?,?,?,?)";
         try {
             ps = con.getCon().prepareStatement(sql);
+            
             ps.setString(1, txtSalesProductName.getSelectedItem().toString());
             ps.setFloat(2, Float.parseFloat(txtSaleUnitPrice.getText().trim()));
             ps.setFloat(3, Float.parseFloat(txtSaleQuantity.getText().trim()));
