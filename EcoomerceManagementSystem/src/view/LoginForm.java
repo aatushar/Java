@@ -40,7 +40,7 @@ public class LoginForm extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 500));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/techmanLast.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/finaltechman.png"))); // NOI18N
         jLabel8.setPreferredSize(new java.awt.Dimension(243, 234));
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
@@ -202,7 +202,7 @@ public class LoginForm extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        String userName="tushar@gmail.com";
+        String userName="admin";
         String pass="1234";
         
         String userNameU=txtEmail.getText().trim();

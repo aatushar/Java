@@ -229,60 +229,60 @@ public class DashBoard extends javax.swing.JFrame {
         jLabel4.setText("PID");
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 40, -1));
 
-        jLabel5.setText("Product Name");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+        jLabel5.setText("Mobile Name & Model");
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
 
         jLabel6.setText("Unit Price");
-        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         jLabel7.setText("Quantity");
-        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
         jLabel8.setText("Total price");
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
 
         jLabel9.setText("Discount");
-        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
 
         jLabel10.setText("Actual Price");
-        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, -1, -1));
+        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, -1));
 
         jLabel11.setText("Cash Recived");
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, -1, -1));
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, -1, -1));
 
         jLabel12.setText("Due Amount");
-        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, -1, -1));
+        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, -1, -1));
 
         jLabel13.setText("Date");
-        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 560, -1, -1));
+        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, -1, -1));
 
         jLabel14.setText("Customer Name");
-        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 610, -1, -1));
+        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
         jPanel4.add(txtSalesPid, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 210, -1));
 
         txtSalesProductname.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Samsung", "Oneplus", "Xiomi", "Realme", "Oppo" }));
-        jPanel4.add(txtSalesProductname, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 210, -1));
-        jPanel4.add(txtSalesUnitPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 210, -1));
-        jPanel4.add(txtSalesQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 210, -1));
-        jPanel4.add(txtSalesTotalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, 210, -1));
-        jPanel4.add(txtSalesDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 210, -1));
-        jPanel4.add(txtSalesActualPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 210, -1));
-        jPanel4.add(txtCashRecived, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 450, 210, -1));
-        jPanel4.add(txtSalesDueAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 500, 210, -1));
-        jPanel4.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 600, 210, -1));
-        jPanel4.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 550, 210, -1));
+        jPanel4.add(txtSalesProductname, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 210, -1));
+        jPanel4.add(txtSalesUnitPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 210, -1));
+        jPanel4.add(txtSalesQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 210, -1));
+        jPanel4.add(txtSalesTotalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 210, -1));
+        jPanel4.add(txtSalesDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, 210, -1));
+        jPanel4.add(txtSalesActualPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 210, -1));
+        jPanel4.add(txtCashRecived, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 210, -1));
+        jPanel4.add(txtSalesDueAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, 210, -1));
+        jPanel4.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 210, -1));
+        jPanel4.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 210, -1));
 
         btnSalesSave.setText("Save");
-        jPanel4.add(btnSalesSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, -1, -1));
+        jPanel4.add(btnSalesSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, -1, -1));
 
         btnSalesUpdate.setText("Update");
-        jPanel4.add(btnSalesUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 360, -1, -1));
+        jPanel4.add(btnSalesUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 510, -1, -1));
 
         txtSalesDelete.setText("Delete");
-        jPanel4.add(txtSalesDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, -1, -1));
+        jPanel4.add(txtSalesDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 510, -1, -1));
 
         txtSalesReset.setText("Reset");
-        jPanel4.add(txtSalesReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 470, -1, -1));
+        jPanel4.add(txtSalesReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, -1, -1));
 
         txtSalesTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -297,7 +297,7 @@ public class DashBoard extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(txtSalesTable);
 
-        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, 530, 590));
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, 670, 590));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 710));
 
@@ -325,39 +325,47 @@ public class DashBoard extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        
+        menu.setSelectedIndex(0);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        menu.setSelectedIndex(1);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        menu.setSelectedIndex(2);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        menu.setSelectedIndex(3);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+        menu.setSelectedIndex(4);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
+        menu.setSelectedIndex(5);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+        menu.setSelectedIndex(6);
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
+        menu.setSelectedIndex(8);
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
+        menu.setSelectedIndex(7);
     }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
