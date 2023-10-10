@@ -34,7 +34,7 @@ public class DashBorad extends javax.swing.JFrame {
     java.sql.Date sqlDate = java.sql.Date.valueOf(currentDate);
 
     String[] productColumns = {"Product ID", "Product Name", "Product catagory", "Product code"};
-    String[] purchaseColumns = {"Purchase ID", "Product Name", "UnitPrice", "Quantity", "Date"};
+    String[] purchaseColumns = {"Purchase ID", "Product Name", "UnitPrice", "Quantity", "Total Price", "Date"};
 
     public void updateStockSales() {
 
@@ -64,7 +64,7 @@ public class DashBorad extends javax.swing.JFrame {
         try {
             ps = con.getCon().prepareStatement(sql);
 
-            ps.setFloat(1, Float.parseFloat(txtSaleQuantity.getText().trim()));
+            ps.setFloat(1, Float.parseFloat(txtPurchaseQuantity.getText().trim()));
             ps.setString(2, txtPurchaseProductCombo.getSelectedItem().toString());
 
             ps.executeUpdate();
@@ -1275,19 +1275,21 @@ public class DashBorad extends javax.swing.JFrame {
 //         TODO add your handling code here:
         sql = "insert into sales(name, unitPrice, quantity, totalPrice, discount,"
                 + " actualPrice, cashRecived, dueAmount, date)"
-                + "  values(?,?,?,?,?,?,?,?)";
+                + "  values(?,?,?,?,?,?,?,?,?)";
         try {
             ps = con.getCon().prepareStatement(sql);
-            
+
             ps.setString(1, txtSalesProductName.getSelectedItem().toString());
             ps.setFloat(2, Float.parseFloat(txtSaleUnitPrice.getText().trim()));
             ps.setFloat(3, Float.parseFloat(txtSaleQuantity.getText().trim()));
-            ps.setFloat(4, getActualPrice());
-            ps.setFloat(5, getDiscountAmount());
-            ps.setFloat(6, Float.parseFloat(txtSalesDueAmount.getText().trim()));
-            ps.setInt(7, 1);
+            ps.setFloat(4, Float.parseFloat(txtSalesTotalPrice.getText().trim()));
 
-            ps.setDate(8, convertUtilDateToSqlDate(dateSalesDate.getDate()));
+            ps.setFloat(5, getActualPrice());
+            ps.setFloat(6, getDiscountAmount());
+            ps.setFloat(7, Float.parseFloat(txtSalesDueAmount.getText().trim()));
+            ps.setInt(8, 1);
+
+            ps.setDate(9, convertUtilDateToSqlDate(dateSalesDate.getDate()));
 
             ps.executeUpdate();
             ps.close();
@@ -1442,6 +1444,9 @@ public class DashBorad extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Data not Save");
             Logger.getLogger(DashBorad.class.getName()).log(Level.SEVERE, null, ex);
         }
+        updateStockPurchase();
+        getAllPurchase();
+
     }//GEN-LAST:event_btnPurchaseSaveMouseClicked
 
     private void txtProductNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProductNameActionPerformed
